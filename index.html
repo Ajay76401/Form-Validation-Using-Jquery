@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Validation Project !</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="error"></div>
+    <div class="success"></div>
+    <div class="container">
+
+        <div class="formelement">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter Your Email .">
+        </div>
+
+
+        <div class="formelement">
+            <label for="phoneno">Phone-Number</label>
+            <input type="text" id="phoneno" name="phoneno" min="10" max="10" placeholder="Enter Your Phone Number .">
+        </div>
+        <div class="formelement">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password .">
+        </div>
+
+        <div class="formelement">
+            <label for="confirmPassword">Confirm-Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm yoyr Password">
+        </div>
+
+
+        <input id="submit1" type="submit">
+
+
+        <script src="script.js"> </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+  body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 130%;
+      font-family: cursive;
+  }
+
+  .container {
+      width: 550px;
+      margin: auto;
+  }
+
+  label {
+      width: 200px;
+      float: left;
+      position: relative;
+      top: 12px;
+  }
+
+  .formelement {
+      margin-bottom: 10px;
+      position: relative;
+  }
+
+  input {
+      width: 320px;
+      font-size: 25px;
+      border: 1px solid black;
+      border-radius: 6px;
+
+      padding: 5px 5px 1px 5px;
+  }
+
+  #submit1 {
+      width: 100px;
+      margin-left: 200px;
+  }
+
+  .error {
+      color: white;
+      font-size: 120%;
+      text-align: center;
+      background-color: red;
+      
+     
+     
+  }
+
+  .success {
+      color: white;
+      font-size: 120%;
+      text-align: center;
+       background-color: green;
+  }
+
+  .toggle-password,
+  .toggle-confirm-password {
+      position: absolute;
+      /* Positions the icon relative to .formelement */
+      right: 30px;
+      /* Adjust as needed to position from the right edge of the input */
+      cursor: pointer;
+      /* Indicates it's clickable */
+      font-size: 18px;
+      /* Adjust icon size */
+      color: #666;
+      /* Dark gray color for the icon */
+      top: 50%;
+      /* Vertically centers the icon */
+      transform: translateY(-50%);
+      /* Adjusts for the icon's own height to perfectly center */
+      z-index: 2;
+      /* Ensures the icon is above the input field */
+  }
