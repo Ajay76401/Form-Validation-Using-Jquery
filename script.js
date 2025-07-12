@@ -9,11 +9,24 @@ $(document).ready(function () {
         return regex.test(email);
     }
 
+    
+
     function isPasswordComplex(password) {
         // Minimum 8 characters, at least one uppercase, one lowercase, one number
         var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
         return regex.test(password);
     }
+
+    $('#phoneno').keypress(function (event) {
+        // Get the character code of the key pressed
+        var charCode = (event.which) ? event.which : event.keyCode;
+
+        // Allow only numbers (0-9), backspace (8), and delete (46)
+        // Check if the character is not a digit
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            event.preventDefault(); // Prevent the character from being entered
+        }
+    });
 
     $('#password').after('<span class="toggle-password">&#128065;</span>');
     $('#confirmPassword').after('<span class="toggle-confirm-password">&#128065;</span>');
