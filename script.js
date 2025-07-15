@@ -9,6 +9,7 @@ $(document).ready(function () {
 
         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
             event.preventDefault();
+             return;
         } 
         if (currentValue.length >= 10 && charCode !== 8 && charCode !== 46) {
 
