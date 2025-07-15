@@ -3,13 +3,26 @@
 
 $(document).ready(function () {
 
+    $('#phoneno').keypress(function (event) {
+        var charCode = (event.which) ? event.which : event.keyCode;
+        var currentValue = $(this).val();
 
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            event.preventDefault();
+        } 
+        if (currentValue.length >= 10 && charCode !== 8 && charCode !== 46) {
+
+            event.preventDefault();
+        }
+    });
+
+   
     function isEmail(email) {
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         return regex.test(email);
     }
 
-    
+
 
     function isPasswordComplex(password) {
         // Minimum 8 characters, at least one uppercase, one lowercase, one number
@@ -17,16 +30,7 @@ $(document).ready(function () {
         return regex.test(password);
     }
 
-    $('#phoneno').keypress(function (event) {
-        // Get the character code of the key pressed
-        var charCode = (event.which) ? event.which : event.keyCode;
 
-        // Allow only numbers (0-9), backspace (8), and delete (46)
-        // Check if the character is not a digit
-        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-            event.preventDefault(); // Prevent the character from being entered
-        }
-    });
 
     $('#password').after('<span class="toggle-password">&#128065;</span>');
     $('#confirmPassword').after('<span class="toggle-confirm-password">&#128065;</span>');
@@ -112,7 +116,7 @@ $(document).ready(function () {
             $('input[type="text"], input[type="password"]').val('');
         }
 
-       
+
 
     });
 
